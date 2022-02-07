@@ -28,7 +28,7 @@
             setInterval(() => {
                 const timesNow = new Date().getTime();
                 const trick = (finalMB-timesNow)/1000;
-                document.getElementById("text").innerHTML = `${Math.floor(trick/(3600*24))} days <br> and <br> ${Math.round((trick%(24*3600))/(60*60))} hours left <br> 😇`;
+                document.getElementById("text").innerHTML = `${Math.floor(trick/(3600*24))} days <br> and <br> ${Math.round((trick%(24*3600))/(60*60))} hours left <br><br> 😇`;
             },50)
         })()
 
@@ -52,7 +52,7 @@
             setInterval(() => {
                 const timesNow = new Date().getTime();
                 const trick = (finalMB-timesNow)/1000;
-                document.getElementById("text").innerHTML = `${Math.floor(trick/(3600*24))} days <br> and <br> ${Math.round((trick%(24*3600))/(60*60))} hours left <br> 😇`;
+                document.getElementById("text").innerHTML = `${Math.floor(trick/(3600*24))} days <br> and <br> ${Math.round((trick%(24*3600))/(60*60))} hours left <br><br> 😇`;
             },50)
         }
 
@@ -66,7 +66,7 @@
             document.getElementById("main").style.color = "White";
             setInterval(() => {
                 const timesNow = new Date().getTime();
-                document.getElementById("text").innerHTML = `${(finalMB-timesNow)/1000} <br> seconds left <br> !!!! <br> 😰`;
+                document.getElementById("text").innerHTML = `${(finalMB-timesNow)/1000} <br> seconds left <br> !!!! <br><br> 😰`;
             },50)
         }
 
