@@ -1,0 +1,9 @@
+{
+    "theme_color": "#035efc",
+    "background_color": "#ffffff",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "icon": "favicon.png"
+  }
