@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>FinalMB</title>
+</head>
+<body style="margin:0px;padding:0px;font-family:sans-serif!important;">
+    <div id="main" style="padding:5vwpx;height:90vh;width:100vw;background-color:blue;display:flex;justify-content: center;align-items: center;">
+        <div id="text" style="font-size:15vw;text-align: center;">nice</div>
+    </div>
+    <footer style="height:10vh;width:100vw;display:flex;justify-content: space-around;">
+        <button style="height:10vh;width:33.3vw;font-size:6vw;font-weight: bold;cursor: pointer; border: 0px;color:white;background-color: red;" onclick="panic()">Panic</button>
+        <button style="height:10vh;width:33.3vw;font-size:6vw;font-weight: bold;cursor: pointer; border: 0px;color:black;background-color: white;" onclick="normalcy()">Normal</button>
+        <button style="height:10vh;width:33.3vw;font-size:6vw;font-weight: bold;cursor: pointer; border: 0px;color:white;background-color: blue;" onclick="relax()">Relax</button>
+    </footer>
+
+    <script>
+        (() => {
+            const interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
+            for (let i = 1; i < interval_id; i++) {
+            window.clearInterval(i);
+            }
+            document.getElementById("main").style.backgroundColor = "White";
+            document.getElementById("main").style.color = "Black";
+            setInterval(() => {
+                const timesNow = new Date().getTime();
+                const trick = (finalMB-timesNow)/1000;
+                document.getElementById("text").innerHTML = `${Math.floor(trick/(3600*24))} days <br> and <br> ${Math.round((trick%(24*3600))/(60*60))} hours left <br> 😇`;
+            },50)
+        })()
+
+        const finalMB = 1647228600000;
+
+        const thanosSnap = () => {
+            const interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
+            for (let i = 1; i < interval_id; i++) {
+            window.clearInterval(i);
+            }
+        }
+
+        const normalcy = () => {
+            thanosSnap();
+            const interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
+            for (let i = 1; i < interval_id; i++) {
+            window.clearInterval(i);
+            }
+            document.getElementById("main").style.backgroundColor = "White";
+            document.getElementById("main").style.color = "Black";
+            setInterval(() => {
+                const timesNow = new Date().getTime();
+                const trick = (finalMB-timesNow)/1000;
+                document.getElementById("text").innerHTML = `${Math.floor(trick/(3600*24))} days <br> and <br> ${Math.round((trick%(24*3600))/(60*60))} hours left <br> 😇`;
+            },50)
+        }
+
+        const panic = () => {
+            thanosSnap();
+            const interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
+            for (let i = 1; i < interval_id; i++) {
+            window.clearInterval(i);
+            }
+            document.getElementById("main").style.backgroundColor = "Red";
+            document.getElementById("main").style.color = "White";
+            setInterval(() => {
+                const timesNow = new Date().getTime();
+                document.getElementById("text").innerHTML = `${(finalMB-timesNow)/1000} <br> seconds left <br> !!!! <br> 😰`;
+            },50)
+        }
+
+        const relaxHelper = () => {
+            const timesNow = new Date().getTime();
+            document.getElementById("text").innerHTML = `More than <br> ${Math.floor((finalMB-timesNow)/(1000*3600*24*7))} weeks <br> left <br> 🤘`;
+        }
+        const relax = () => {
+            thanosSnap();
+            document.getElementById("main").style.backgroundColor = "Blue";
+            document.getElementById("main").style.color = "White";
+            relaxHelper();
+            setInterval(() => {
+                relaxHelper();
+            },10000)
+        }
+    </script>
+</body>
+</html>
